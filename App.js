@@ -1,10 +1,12 @@
 import React, { useState } from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet } from "react-native";
 import * as Font from "expo-font";
 import { AppLoading } from "expo";
+import { useScreens, enableScreens } from "react-native-screens";
 
 import MealsNavigator from "./navigation/MealsNavigator";
 
+enableScreens();
 const fetchFonts = () => {
   return Font.loadAsync({
     "open-sans": require("./assets/fonts/OpenSans-Regular.ttf"),
@@ -24,9 +26,7 @@ export default function App() {
       />
     );
   }
-  return (
-    <MealsNavigator />
-  );
+  return <MealsNavigator />;
 }
 
 const styles = StyleSheet.create({

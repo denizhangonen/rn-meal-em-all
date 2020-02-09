@@ -3,9 +3,9 @@ import { View, Text, StyleSheet } from "react-native";
 
 import { HeaderButtons, Item } from "react-navigation-header-buttons";
 
+import HeaderButton from "../components/HeaderButton";
 import MealList from "../components/MealList";
 import { MEALS } from "../data/dummy-data";
-import HeaderButton from "../components/HeaderButton";
 
 const FavoritesScreen = props => {
   const favMeals = MEALS.filter(m => m.id === "m1" || m.id === "m2");
